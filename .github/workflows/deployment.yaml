@@ -15,18 +15,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        uses: actions/checout@v3
+        uses: actions/checkout@v3
       - name: Install dependencies
-        run: npm install      
+        run: npm ci      
       - name: test code
         run: npm run test
   Deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        uses: actions/checout@v3
+        uses: actions/checkout@v3
       - name: Install dependencies
-        run: npm install      
+        run: npm ci      
       - name: build code
         run: npm run build
       - name: deploy code
